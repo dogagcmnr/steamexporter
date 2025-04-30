@@ -1,0 +1,36 @@
+name: Auto Release with ZIP
+
+on:
+  push:
+    tags:
+      - 'v*'
+      - 'release-*'
+      - 'beta-*'
+      - 'nightly-*'
+
+jobs:
+  release:
+    name: Build and Release
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v3
+
+    - name: Create ZIP archive
+      run: |
+        mkdir output
+        zip -r output/extension.zip . -x '*.git*' '.github/*' 'output/*'
+
+    - name: Create GitHub Release with ZIP
+      uses: softprops/action-gh-release@v1
+      with:
+        name: ${{ github.ref_name }}
+        tag_name: ${{ github.ref_name }}
+        body: |
+          🚀 New release dropped!
+          - Tag: ${{ github.ref_name }}
+          - ZIP file created.
+        files: output/extension.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
