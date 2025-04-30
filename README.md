@@ -33,8 +33,8 @@ Download the latest release from the [Releases Page](https://github.com/dogagcmn
 ## 💡 Usage
 
 1. Go to your [Steam account history page](https://store.steampowered.com/account/).
-2. Click the extension icon.
-3. CSV will be generated and downloaded automatically.
+2. Click the 'Export' button on top right over the table.
+3. CSV will be generated and downloaded automatically to your Downloads folder.
 
 ---
 
