@@ -6,6 +6,9 @@
   <a href="https://github.com/dogagcmnr/steamexporter/blob/main/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/dogagcmnr/steamexporter" />
   </a>
+    <a href="https://makeapullrequest.com" target="_blank">
+        <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></img>
+    </a>
 </p>
 
 Easily export your full Steam purchase history as a CSV file — with just **one click**.
